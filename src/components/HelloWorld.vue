@@ -36,7 +36,7 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style lang="less" scoped>
 .top {
   width: 100%;
@@ -45,7 +45,7 @@ export default {
   position: absolute;
   right: 2px;
   bottom: 778px;
-  // margin-bottom: 0;
+
   overflow: hidden;
   .flex {
     display: flex;
