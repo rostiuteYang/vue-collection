@@ -144,7 +144,7 @@ export default {
       .item-mid2 {
         border: 1px solid #4cda63;
         border-top-color: #46d25e;
-        background: #4bd462;
+        background: #4cda63;
         color: white;
         font-size: 20px;
         margin-top: 20px;
