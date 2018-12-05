@@ -17,8 +17,8 @@ export default {
   // 传进来的对象
   props: {
     user: {
-      type: Array,
-      type: null
+      type: Object,
+      default: null
     },
     isSigned: {
       type: Boolean,
@@ -45,7 +45,7 @@ export default {
     // },
     //把index传到子组件中
     submit() {
-      this.onsubmit(this.index);
+      this.onsubmit("this.index");
     }
   }
 };

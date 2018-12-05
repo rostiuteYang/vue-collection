@@ -10,18 +10,6 @@
         <span>—</span>
       </div>
       <div class="sg-body">
-        <!-- <sub-group
-          v-for="(user,index) in userList"
-          :key="index"
-          :data="user.data"
-          :img="user.img"
-          :jifen="user.jifen"
-          :img1="user.img1"
-          :userData.sync="userData"
-          :isSigned="user.isSigned"
-          :index="index"
-          :onsunbmit="dd"
-        ></sub-group>-->
         <select-item
           v-for="(user,index) in signList"
           :user="user"
@@ -31,16 +19,6 @@
           :onsubmit="cc"
           :key="index"
         ></select-item>
-        <!-- <div class="sgb-del" v-for="user in userList" @click="changeindex">
-          <span class="sgb-title">{{user.data}}</span>
-          <img :src="user.img" class="sgb-pic">
-          <div class="sgb-bottom">{{user.jifen}}积分</div>
-          <img :src="user.img1" class="sgb-pic1">
-        </div>-->
-        <!-- <div class="sglast" :class="{sglast1,act:c==7}" @click="bbb(7)"> -->
-        <!-- <div class="sgb-qiandao1" v-if="isSigned">
-          <span class="aaa">已签到</span>
-        </div>-->
         <div :class="{sglast,act:c==7}" @click="bbb(7)">
           <span class="sgl-title">第七天</span>
           <img src="../assets/红包.png" class="sgl-pic">
@@ -58,11 +36,9 @@
 </template>
 <script>
 import SelectItem from "./SelectItem";
-// import SubGroup from "./SubGroup";
 export default {
   components: {
     "select-item": SelectItem
-    // "sub-group": SubGroup
   },
   data() {
     return {
@@ -120,14 +96,10 @@ export default {
     bbb(index) {
       this.c = index;
     },
-
     cc() {
-      // this.userList[index].isSigned = true;
-      this.userList[index].isSigned = !this.userList[index].isSigned;
+      this.userList[index].isSigned = true;
+      // this.userList[index].isSigned = !this.userList[index].isSigned;
     }
-    // dd() {
-    //   this.userList[index].isSigned = true;
-    // }
   }
 };
 </script>
